@@ -5,8 +5,10 @@ from apps.models import Packages
 
 
 # Create your views here.
-class IndexView(TemplateView):
+class IndexView(ListView):
+    model = Packages
     template_name = 'index.html'
+    context_object_name = 'package_list'
 
 
 class AboutView(TemplateView):
