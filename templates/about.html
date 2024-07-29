@@ -9,27 +9,155 @@
     <header>
         <h1>About Us</h1>
     </header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Uzbekistan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #0779e4 3px solid;
+        }
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header ul {
+            padding: 0;
+            list-style: none;
+        }
+        header li {
+            float: left;
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+        header #branding {
+            float: left;
+        }
+        header #branding h1 {
+            margin: 0;
+        }
+        header nav {
+            float: right;
+            margin-top: 10px;
+        }
+        #showcase {
+            min-height: 400px;
+            background: url('https://example.com/your-image.jpg') no-repeat 0 -400px;
+            text-align: center;
+            color: #fff;
+        }
+        #showcase h1 {
+            margin-top: 100px;
+            font-size: 55px;
+            margin-bottom: 10px;
+        }
+        #showcase p {
+            font-size: 20px;
+        }
+        .info {
+            margin: 20px 0;
+        }
+        .info img {
+            width: 100%;
+            height: auto;
+        }
+        .info h2 {
+            text-align: center;
+            padding: 10px;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 30px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1>Discover Uzbekistan</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#tashkent">Tashkent</a></li>
+                    <li><a href="#samarkand">Samarkand</a></li>
+                    <li><a href="#bukhara">Bukhara</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div id="showcase">
+        <div class="container">
+            <h1>Welcome to Uzbekistan</h1>
+            <p style="color: green">Explore the heart of Central Asia</p>
+        </div>
+    </div>
 
     <div class="container">
-        <section>
-            <h2>Our Story</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin gravida libero et quam consequat, sed tincidunt urna eleifend. Donec euismod mi sed urna bibendum, eget suscipit est efficitur. Nulla facilisi. Suspendisse potenti. Nulla tincidunt dui id urna consequat, vitae dapibus lorem aliquam. Integer eget elit et odio ullamcorper convallis vel at justo.</p>
-        </section>
-
-        <section>
-            <h2>Our Mission</h2>
-            <p>Nullam sed erat gravida, ultricies est eu, cursus tellus. Quisque fringilla orci vitae augue scelerisque facilisis. Nullam non tempor dui. Nullam sit amet scelerisque velit. Nulla auctor maximus justo, ac volutpat elit malesuada nec. Donec vel mi ullamcorper, tincidunt ex sit amet, commodo lectus.</p>
-        </section>
-
-        <section>
-            <h2>Our Team</h2>
+        <section id="tashkent" class="info">
+            <img src="{% static 'img/tashkent.jpg' %}">
+            <h2 style="color: green">Tashkent: The Vibrant Capital</h2>
+            <p>Tashkent, the capital city of Uzbekistan, is a bustling metropolis where modernity meets tradition.</p>
             <ul>
-                <li>John Doe - CEO</li>
-                <li>Jane Smith - COO</li>
-                <li>Michael Johnson - CFO</li>
+                <li><strong>Khast Imam Complex</strong>: A spiritual center housing the famous Quran of Caliph Uthman.</li>
+                <li><strong>Chorsu Bazaar</strong>: A lively market offering a glimpse into local life with fresh produce, spices, and traditional crafts.</li>
+                <li><strong>Amir Timur Square</strong>: A central landmark surrounded by important buildings and a statue of the great conqueror.</li>
+            </ul>
+        </section>
+
+        <section id="samarkand" class="info">
+            <img src="{% static 'img/samarkand2.jpg' %}" alt="Samarkand">
+            <h2 style="color: green">Samarkand: The Jewel of the Silk Road</h2>
+            <p style="color: green">Samarkand, one of the oldest inhabited cities in Central Asia, is a treasure trove of historical and architectural wonders.</p>
+            <ul>
+                <li><strong>Registan Square</strong>: A magnificent ensemble of three madrasahs with stunning Islamic architecture.</li>
+                <li><strong>Shah-i-Zinda</strong>: A necropolis with intricately decorated mausoleums.</li>
+                <li><strong>Bibi-Khanym Mosque</strong>: Once one of the largest mosques in the Islamic world, it still impresses with its grandeur.</li>
+            </ul>
+        </section>
+
+        <section id="bukhara" class="info">
+            <img src="{% static 'img/bukhara.jpg' %}" alt="Bukhara">
+            <h2 style="color: green">Bukhara: The Living Museum</h2>
+            <p style="color: green">Bukhara, a UNESCO World Heritage Site, is a city where history is alive in every corner.</p>
+            <ul>
+                <li><strong>The Ark Fortress</strong>: A massive fortress that has been a symbol of power for centuries.</li>
+                <li><strong>Poi Kalyan Complex</strong>: Featuring the Kalyan Minaret, Kalyan Mosque, and Mir-i-Arab Madrasah.</li>
+                <li><strong>Lyab-i Hauz</strong>: A picturesque plaza centered around a pool, surrounded by historic buildings.</li>
             </ul>
         </section>
     </div>
+
+    <footer>
+        <p>Discover Uzbekistan &copy; 2024</p>
+    </footer>
+</body>
+</html>
+
 
 
 {% endblock %}
